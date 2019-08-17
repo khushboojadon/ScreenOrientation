@@ -1,6 +1,5 @@
 package com.example.screenorientation;
 
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,24 +32,27 @@ Integer i=0;
             number.setText(String.valueOf(i));
         }
     }
-
+    // increment the value of number
     public void add()
     {
         i++;
         number.setText(String.valueOf(i));
     }
+    // decrement the value of number
     public void subtract()
     {
         i--;
         number.setText(String.valueOf(i));
     }
 
+    // save the value of number
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("count",i);
     }
 
+    // find elements by Id
     public void findElementById()
     {
         sub=findViewById(R.id.sub);
